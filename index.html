@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">NotesApp</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>My Notes</h2>
+            <button class="btn btn-primary">+ New Note</button>
+            <ul class="notes-list">
+                <li class="note-item active">
+                    <h3>Shopping List</h3>
+                    <p>Today at 10:30 AM</p>
+                </li>
+                <li class="note-item">
+                    <h3>Meeting Notes</h3>
+                    <p>Yesterday</p>
+                </li>
+                <li class="note-item">
+                    <h3>Ideas</h3>
+                    <p>Jan 15, 2026</p>
+                </li>
+                <li class="note-item">
+                    <h3>Todo List</h3>
+                    <p>Jan 14, 2026</p>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <div class="note-editor">
+                <div class="editor-header">
+                    <input type="text" class="note-title" placeholder="Note Title" value="Shopping List">
+                    <div class="editor-actions">
+                        <button class="btn btn-secondary">Save</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+
+                <div class="editor-toolbar">
+                    <label for="category">Category:</label>
+                    <select id="category" class="input-field">
+                        <option>Personal</option>
+                        <option>Work</option>
+                        <option>Ideas</option>
+                        <option>Todo</option>
+                    </select>
+
+                    <label for="tags">Tags:</label>
+                    <input type="text" id="tags" class="input-field" placeholder="Add tags...">
+                </div>
+
+                <textarea class="note-content" placeholder="Start typing your note here...">
+- Milk
+- Eggs
+- Bread
+- Coffee
+- Fruits
+                </textarea>
+
+                <div class="note-footer">
+                    <span class="note-info">Last edited: Today at 10:30 AM</span>
+                    <span class="note-info">Words: 5</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 NotesApp. Built with HTML & CSS</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
