@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Div - Position Absolute</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: #ecf0f1;
+            border: 2px solid #34495e;
+            margin: 20px 0;
+        }
+
+        .centered-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            padding: 30px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-box h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">NotesApp</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="center-div.html" class="active">Center Div</a></li>
+                <li><a href="center-margin.html">Margin Auto</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-container">
+        <div class="page-content">
+            <h1>Centering a Div with Position Absolute</h1>
+            <p>This page demonstrates how to center a div using <code>position: absolute</code> without flexbox.</p>
+
+            <div class="info-card">
+                <h2>The Technique</h2>
+                <p>To center a div using position absolute, follow these steps:</p>
+                <ol>
+                    <li>Set the parent container to <code>position: relative</code></li>
+                    <li>Set the child element to <code>position: absolute</code></li>
+                    <li>Position it at <code>top: 50%</code> and <code>left: 50%</code></li>
+                    <li>Use <code>transform: translate(-50%, -50%)</code> to offset it back by half its own width and height</li>
+                </ol>
+            </div>
+
+            <div class="info-card">
+                <h2>Live Demo</h2>
+                <p>The blue box below is centered using position absolute:</p>
+
+                <div class="demo-container">
+                    <div class="centered-box">
+                        <h3>I'm Centered!</h3>
+                        <p>This box is perfectly centered using position absolute with the transform technique.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>The CSS Code</h2>
+                <div class="code-example">
+                    <code>
+                        /* Parent container */<br>
+                        .demo-container {<br>
+                        &nbsp;&nbsp;position: relative;<br>
+                        &nbsp;&nbsp;width: 100%;<br>
+                        &nbsp;&nbsp;height: 500px;<br>
+                        }<br>
+                        <br>
+                        /* Centered child element */<br>
+                        .centered-box {<br>
+                        &nbsp;&nbsp;position: absolute;<br>
+                        &nbsp;&nbsp;top: 50%;<br>
+                        &nbsp;&nbsp;left: 50%;<br>
+                        &nbsp;&nbsp;transform: translate(-50%, -50%);<br>
+                        &nbsp;&nbsp;width: 300px;<br>
+                        &nbsp;&nbsp;padding: 30px;<br>
+                        }
+                    </code>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>Why This Works</h2>
+                <ul>
+                    <li><strong>position: relative</strong> on the parent creates a positioning context</li>
+                    <li><strong>position: absolute</strong> on the child removes it from normal flow</li>
+                    <li><strong>top: 50%; left: 50%</strong> positions the top-left corner of the element at the center</li>
+                    <li><strong>transform: translate(-50%, -50%)</strong> shifts the element back by half its own dimensions, truly centering it</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>Alternative Method (Fixed Dimensions)</h2>
+                <p>If you know the exact dimensions of the element, you can also use negative margins:</p>
+                <div class="code-example">
+                    <code>
+                        .centered-box {<br>
+                        &nbsp;&nbsp;position: absolute;<br>
+                        &nbsp;&nbsp;top: 50%;<br>
+                        &nbsp;&nbsp;left: 50%;<br>
+                        &nbsp;&nbsp;width: 300px;<br>
+                        &nbsp;&nbsp;height: 200px;<br>
+                        &nbsp;&nbsp;margin-left: -150px; /* Half of width */<br>
+                        &nbsp;&nbsp;margin-top: -100px; /* Half of height */<br>
+                        }
+                    </code>
+                </div>
+                <p><strong>Note:</strong> The transform method is preferred because it works regardless of the element's dimensions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 NotesApp. Built with HTML & CSS</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

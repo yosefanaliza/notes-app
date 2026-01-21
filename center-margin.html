@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Div - Margin Auto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-container {
+            width: 100%;
+            background-color: #ecf0f1;
+            border: 2px solid #34495e;
+            margin: 20px 0;
+            padding: 40px 0;
+        }
+
+        .centered-box {
+            width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #27ae60;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-box h3 {
+            margin-top: 0;
+        }
+
+        .demo-container-2 {
+            width: 100%;
+            background-color: #ecf0f1;
+            border: 2px solid #34495e;
+            margin: 20px 0;
+            padding: 40px 0;
+        }
+
+        .centered-box-percentage {
+            width: 60%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-container-3 {
+            width: 100%;
+            background-color: #ecf0f1;
+            border: 2px solid #34495e;
+            margin: 20px 0;
+            padding: 40px 0;
+        }
+
+        .centered-box-vertical {
+            width: 300px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">NotesApp</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="center-div.html">Center Div</a></li>
+                <li><a href="center-margin.html" class="active">Margin Auto</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-container">
+        <div class="page-content">
+            <h1>Centering a Div with Margin Auto</h1>
+            <p>This page demonstrates how to center a div horizontally using <code>margin: 0 auto</code>.</p>
+
+            <div class="info-card">
+                <h2>The Technique</h2>
+                <p>To center a div horizontally using margin auto:</p>
+                <ol>
+                    <li>Set a <code>width</code> on the element (can be pixels, percentage, or max-width)</li>
+                    <li>Set <code>margin-left: auto</code> and <code>margin-right: auto</code></li>
+                    <li>Or simply use the shorthand: <code>margin: 0 auto</code></li>
+                    <li>The element must be a block-level element (default for div)</li>
+                </ol>
+            </div>
+
+            <div class="info-card">
+                <h2>Demo 1: Fixed Width</h2>
+                <p>The green box below is centered using a fixed width of 300px:</p>
+
+                <div class="demo-container">
+                    <div class="centered-box">
+                        <h3>I'm Centered!</h3>
+                        <p>This box uses margin: 0 auto with a fixed width of 300px.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <code>
+                        .centered-box {<br>
+                        &nbsp;&nbsp;width: 300px;<br>
+                        &nbsp;&nbsp;margin: 0 auto;<br>
+                        }
+                    </code>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>Demo 2: Percentage Width with Max-Width</h2>
+                <p>The red box below is centered using 60% width with a max-width of 500px:</p>
+
+                <div class="demo-container-2">
+                    <div class="centered-box-percentage">
+                        <h3>Responsive Centering</h3>
+                        <p>This box uses width: 60% and max-width: 500px. Try resizing the browser!</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <code>
+                        .centered-box-percentage {<br>
+                        &nbsp;&nbsp;width: 60%;<br>
+                        &nbsp;&nbsp;max-width: 500px;<br>
+                        &nbsp;&nbsp;margin: 0 auto;<br>
+                        }
+                    </code>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>Demo 3: Vertical Spacing</h2>
+                <p>You can add vertical margins while keeping horizontal centering:</p>
+
+                <div class="demo-container-3">
+                    <div class="centered-box-vertical">
+                        <h3>With Vertical Spacing</h3>
+                        <p>This box uses margin: 50px auto to add vertical spacing.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <code>
+                        .centered-box-vertical {<br>
+                        &nbsp;&nbsp;width: 300px;<br>
+                        &nbsp;&nbsp;margin: 50px auto; /* 50px top/bottom, auto left/right */<br>
+                        }
+                    </code>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>How It Works</h2>
+                <ul>
+                    <li><strong>margin-left: auto</strong> and <strong>margin-right: auto</strong> distribute the remaining horizontal space equally on both sides</li>
+                    <li>This only works horizontally - margin auto does NOT center vertically</li>
+                    <li>The element must have a defined width (not 100%)</li>
+                    <li>The element must be a block-level element</li>
+                    <li>For inline or inline-block elements, use <code>display: block</code> first</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>When to Use Margin Auto</h2>
+                <p><strong>Best for:</strong></p>
+                <ul>
+                    <li>Centering content containers horizontally</li>
+                    <li>Page layouts and content wrappers</li>
+                    <li>Simple, predictable horizontal centering</li>
+                    <li>When you don't need vertical centering</li>
+                </ul>
+                <p><strong>Not suitable for:</strong></p>
+                <ul>
+                    <li>Vertical centering (use flexbox, position absolute, or grid instead)</li>
+                    <li>Centering inline elements (use text-align: center on parent)</li>
+                    <li>Complex layouts with multiple centering requirements</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h2>Common Variations</h2>
+                <div class="code-example">
+                    <code>
+                        /* Just horizontal centering */<br>
+                        margin: 0 auto;<br>
+                        <br>
+                        /* With vertical spacing */<br>
+                        margin: 20px auto;<br>
+                        <br>
+                        /* Different top/bottom margins */<br>
+                        margin: 20px auto 40px auto;<br>
+                        <br>
+                        /* Explicit left/right */<br>
+                        margin-left: auto;<br>
+                        margin-right: auto;
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 NotesApp. Built with HTML & CSS</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
